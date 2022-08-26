@@ -13,10 +13,16 @@ namespace ManejoDeErrores
             list[3] = "Wednesday";
             list[4] = "Thursday";
 
-            for (int i = 0; i <= 5; i++)
-            {
-                Console.WriteLine(list[i].ToString());
+            try {
+                for (int i = 0; i <= 5; i++)
+                {
+                    Console.WriteLine(list[i].ToString());
+                }    
+            } catch (System.IndexOutOfRangeException) {
+                
+                Console.WriteLine("El index no existe");
             }
+            
             Console.ReadLine();
         }
     }
