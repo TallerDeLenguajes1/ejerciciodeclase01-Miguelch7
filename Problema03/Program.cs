@@ -10,8 +10,12 @@ namespace Problema03
             Auto Auto1 = CrearAutoFiat(2020);            
             MostrarAuto(Auto1);            
 
-            Auto Auto2 = CrearAutoPeugeot();
-            MostrarAuto(Auto2);
+            try {
+                Auto Auto2 = CrearAutoPeugeot();
+                MostrarAuto(Auto2);
+            } catch (System.NullReferenceException) {
+                Console.WriteLine("No se pudo crear el auto Peugeot");
+            }
         }
 
         static Auto CrearAutoFiat(int? anio = null)
